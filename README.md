@@ -1,5 +1,5 @@
-function OnEvent(event, arg)
 
+   
     -- Back button (Mouse Button 4)
     if event == "MOUSE_BUTTON_PRESSED" and arg == 4 then
         PressAndReleaseKey("f9")
@@ -10,11 +10,8 @@ function OnEvent(event, arg)
         PressAndReleaseKey("f2")
     end
 
-    -- DPI button (thường là Button 6)
-    if event == "MOUSE_BUTTON_PRESSED" and arg == 6 then
-        PressKey("lctrl")
-        PressAndReleaseKey("f12")
-        ReleaseKey("lctrl")
+    -- DPI button (Mouse Button 3 cho G304)
+    if event == "MOUSE_BUTTON_PRESSED" and arg == 3 then
+        PressAndReleaseKey("lctrl", "f12")  -- đồng thời Ctrl + F12
     end
-
 end
